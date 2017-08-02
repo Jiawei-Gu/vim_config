@@ -9,9 +9,13 @@ set foldenable
 set foldmethod=manual
 set nocompatible
 if version >= 603
-    set helplang=cn
-    set encoding=utf-8
+  set helplang=cn
+  set encoding=utf-8
 endif
+set backspace=indent,eol,start
+set completeopt=longest,menu
+
+filetype plugin indent on 
 set autoindent
 set smartindent
 set softtabstop=2
@@ -35,21 +39,16 @@ set whichwrap+=<,>,h,l
 ":inoremap " ""<ESC>i
 ":inoremap ' ''<ESC>i
 function! ClosePair(char)
-	if getline('.')[col('.') - 1] == a:char
-		return "\<Right>"
-	else
-		return a:char
-	endif
+  if getline('.')[col('.') - 1] == a:char
+    return "\<Right>"
+  else
+    return a:char
+  endif
 endfunction
-filetype plugin indent on 
-"打开文件类型检测, 加了这句才可以用智能补全
-set completeopt=longest,menu
 
-"set backspace=indent,eol,start
 "set wildmenu
 "set fo=cqrt
 ""set no error bells
 "set noeb visualbell
-"set expandtab
 "let mapleader=","
 
