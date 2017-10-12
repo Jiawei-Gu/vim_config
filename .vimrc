@@ -132,7 +132,7 @@ function! ClosePair(char)
   endif
 endfunction
 
-
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif  
 " 增强模式中的命令行自动完成操作
 "set wildmenu
 "set fo=cqrt
