@@ -54,8 +54,11 @@ filetype plugin indent on    " required
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '/home/username/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "let g:ycm_always_populate_location_list = 1
+let g:ycm_python_binary_path = 'python'
+let g:ycm_server_python_interpreter = 'python'
 nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <C-p> :YcmCompleter GoToImprecise<CR>
+nnoremap <C-p> :YcmCompleter GoTo<CR>
+"nnoremap <C-p> :YcmCompleter GoToImprecise<CR>
 "let g:ycm_confirm_extra_conf = 1
 "let g:ycm_register_as_syntastic_checker = 1 
 
@@ -69,7 +72,8 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%P%%]\ %{strf
 "set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 set laststatus=2
 set foldenable
-set foldmethod=manual
+set foldmethod=indent
+nnoremap <C-f> :set nofoldenable<CR>
 "set nocompatible
 set backspace=indent,eol,start
 if version >= 603
@@ -77,7 +81,7 @@ if version >= 603
   set encoding=utf-8
 endif
 " 自动缩进
-set autoindent
+"set autoindent
 "set cindent
 set smartindent
 " 统一缩进为2
@@ -90,6 +94,7 @@ set expandtab
 set smarttab
 
 "搜索逐字符高亮 
+set ignorecase smartcase
 set hlsearch
 set incsearch
 " 允许backspace和光标键跨越行边界  
