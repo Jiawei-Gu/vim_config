@@ -1,3 +1,4 @@
 # Linux_Config
-configuration for vim
-configuration for tmux
+
+configuration for vim、tmux、zsh
+
