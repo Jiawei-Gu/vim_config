@@ -52,7 +52,7 @@ filetype plugin indent on    " required
 
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '/home/username/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '/home/medivhgu/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 "let g:ycm_always_populate_location_list = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_server_python_interpreter = 'python'
@@ -71,9 +71,9 @@ set scrolloff=3
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%P%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}
 "set statusline=[%F]%y%r%m%*%=[Line:%l/%L,Column:%c][%p%%]
 set laststatus=2
-set foldenable
-set foldmethod=indent
-nnoremap <C-f> :set nofoldenable<CR>
+"set foldenable
+"set foldmethod=indent
+"nnoremap <C-f> :set nofoldenable<CR>
 "set nocompatible
 set backspace=indent,eol,start
 if version >= 603
@@ -84,10 +84,10 @@ endif
 "set autoindent
 "set cindent
 set smartindent
-" 统一缩进为2
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
+" 统一缩进为4
+set softtabstop=4
+set shiftwidth=4
+set tabstop=4
 " 用空格代替制表符  
 set expandtab  
 " 在行和段开始处使用制表符  
