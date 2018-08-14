@@ -27,19 +27,16 @@ Plugin 'L9'
 "" Install L9 and avoid a Naming conflict if you've already installed a
 "" different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+" 载入文件类型插件 and 为特定文件类型载入相关缩进文件
 filetype plugin indent on    " required
-" 载入文件类型插件
-"filetype plugin on
-" 为特定文件类型载入相关缩进文件
-"filetype indent on 
 " 关掉智能补全时的预览窗口
 "set completeopt=longest,menu
 
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
 "
 " Brief help
 " :PluginList       - lists configured plugins
@@ -62,6 +59,15 @@ nnoremap <C-p> :YcmCompleter GoTo<CR>
 "let g:ycm_confirm_extra_conf = 1
 "let g:ycm_register_as_syntastic_checker = 1 
 
+" taglist
+map <F5> :Tlist<cr>
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_GainFocus_On_ToggleOpen = 1
+
+" nerdtree
+map <F4> :NERDTree<cr>
 
 set number
 syntax on
@@ -106,7 +112,7 @@ set whichwrap+=<,>,h,l
 
 :inoremap ( <c-r>=AutoPair('(', ')')<CR>
 :inoremap ) <c-r>=ClosePair(')')<CR>
-":inoremap { <c-r>=AutoPairBig('{', '}')<CR>
+:inoremap { <c-r>=AutoPairBig('{', '}')<CR>
 :inoremap } <c-r>=ClosePair('}')<CR>
 :inoremap [ <c-r>=AutoPair('[', ']')<CR>
 :inoremap ] <c-r>=ClosePair(']')<CR>
@@ -138,6 +144,13 @@ function! ClosePair(char)
 endfunction
 
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif  
+
+set tabpagemax=10
+set showtabline=2
+
+map <F2> :mksession! ~/.vim_session <cr> " Quick write session with F2
+map <F3> :source ~/.vim_session <cr> " And load session with F3
+
 " 增强模式中的命令行自动完成操作
 "set wildmenu
 "set fo=cqrt
