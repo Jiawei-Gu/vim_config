@@ -29,6 +29,7 @@ Plugin 'L9'
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'vim-scripts/taglist.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,7 +55,7 @@ let g:ycm_global_ycm_extra_conf = '/home/medivhgu/.vim/bundle/YouCompleteMe/thir
 let g:ycm_python_binary_path = 'python'
 let g:ycm_server_python_interpreter = 'python'
 nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <C-p> :YcmCompleter GoTo<CR>
+nnoremap <F10> :YcmCompleter GoTo<CR>
 "nnoremap <C-p> :YcmCompleter GoToImprecise<CR>
 "let g:ycm_confirm_extra_conf = 1
 "let g:ycm_register_as_syntastic_checker = 1 
@@ -68,6 +69,10 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 
 " nerdtree
 map <F4> :NERDTree<cr>
+
+let g:ctrlp_map = '<c-p>'     "hotkey Ctrl+p open ctrlp plugin
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = '0'       "disable work path mode
 
 set number
 syntax on
