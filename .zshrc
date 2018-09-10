@@ -95,11 +95,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # unsetopt share_history
 
-source /opt/ros/kinetic/setup.zsh
-source ~/catkin_ws/devel/setup.zsh
-source ~/catkin_ws1/devel/setup.zsh
-export SVGA_VGPU10=0
-source /opt/intel/bin/compilervars.sh intel64
+
+#source /opt/ros/kinetic/setup.zsh
+#export SVGA_VGPU10=0
+
+#source /opt/intel/bin/compilervars.sh intel64
+
 export PYTHONPATH=$PYTHONPATH
 export C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH
