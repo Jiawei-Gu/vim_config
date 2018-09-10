@@ -50,7 +50,7 @@ filetype plugin indent on    " required
 
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '/home/medivhgu/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 "let g:ycm_always_populate_location_list = 1
 let g:ycm_python_binary_path = 'python'
 let g:ycm_server_python_interpreter = 'python'
