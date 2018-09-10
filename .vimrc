@@ -61,6 +61,9 @@ nnoremap <F10> :YcmCompleter GoTo<CR>
 "let g:ycm_register_as_syntastic_checker = 1 
 
 " taglist
+set tags=.tags
+set tags+=~/.vim/systags
+set autochdir
 map <F5> :Tlist<cr>
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
