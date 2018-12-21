@@ -28,6 +28,8 @@ Plugin 'L9'
 "" different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/c.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 
@@ -50,20 +52,24 @@ filetype plugin indent on    " required
 
 
 " YouCompleteMe
-let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
-"let g:ycm_always_populate_location_list = 1
-let g:ycm_python_binary_path = 'python'
-let g:ycm_server_python_interpreter = 'python'
+"let g:ycm_global_ycm_extra_conf = '$HOME/.vim/bundle/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '$HOME/.vim/.ycm_extra_conf.py'
+"let g:syntastic_cpp_compiler = 'g++-7'  "change the compiler to g++ to support c++11
+"let g:syntastic_c_checkers = ['gcc-7']
+"let g:syntastic_cpp_checkers = ['g++-7']
+let g:ycm_collect_identifiers_from_tags_files = 1
+"let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_python_binary_path = 'python3'
+let g:ycm_server_python_interpreter = 'python3'
 nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F10> :YcmCompleter GoTo<CR>
-"nnoremap <C-p> :YcmCompleter GoToImprecise<CR>
-"let g:ycm_confirm_extra_conf = 1
-"let g:ycm_register_as_syntastic_checker = 1 
+"let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " taglist
 set tags=.tags
-set tags+=~/.vim/systags
-set autochdir
+"set tags+=~/.vim/systags
+"set autochdir
 map <F5> :Tlist<cr>
 let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
@@ -88,7 +94,7 @@ set laststatus=2
 "set foldenable
 "set foldmethod=indent
 "nnoremap <C-f> :set nofoldenable<CR>
-"set nocompatible
+set nocompatible
 set backspace=indent,eol,start
 if version >= 603
   set helplang=cn
