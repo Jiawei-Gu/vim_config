@@ -59,10 +59,11 @@ let g:ycm_global_ycm_extra_conf = '$HOME/.vim/.ycm_extra_conf.py'
 "let g:syntastic_cpp_checkers = ['g++-7']
 let g:ycm_collect_identifiers_from_tags_files = 1
 "let g:ycm_enable_diagnostic_highlighting = 0
+"highlight YcmErrorSection guibg=#0000FF
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_server_python_interpreter = 'python3'
-nnoremap <F9> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <F10> :YcmCompleter GoTo<CR>
+nnoremap <F10> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <C-i> :YcmCompleter GoTo<CR>
 "let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
