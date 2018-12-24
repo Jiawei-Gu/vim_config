@@ -63,6 +63,7 @@ let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_python_binary_path = 'python3'
 let g:ycm_server_python_interpreter = 'python3'
 nnoremap <F10> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <C-F10> :YcmShowDetailedDiagnostic<CR>
 nnoremap <C-i> :YcmCompleter GoTo<CR>
 "let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
