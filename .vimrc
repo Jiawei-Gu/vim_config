@@ -73,7 +73,7 @@ set tags=.tags
 "set tags+=~/.vim/systags
 "set autochdir
 map <F5> :Tlist<cr>
-let Tlist_Show_One_File = 1
+let Tlist_Show_One_File = 0
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -84,6 +84,9 @@ map <F4> :NERDTree<cr>
 let g:ctrlp_map = '<c-p>'     "hotkey Ctrl+p open ctrlp plugin
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = '0'       "disable work path mode
+
+" set include folder of current project to jump into header files conveniently
+"set path+=~/workspace/walle/include
 
 set number
 syntax on
