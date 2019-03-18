@@ -101,6 +101,6 @@ source $ZSH/oh-my-zsh.sh
 
 #source /opt/intel/bin/compilervars.sh intel64
 
-export PYTHONPATH=$PYTHONPATH
+export PYTHONPATH
 export C_INCLUDE_PATH
 export CPLUS_INCLUDE_PATH
